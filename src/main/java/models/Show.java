@@ -18,5 +18,19 @@ public class Show extends BaseModel{
     private Date endTime;
     @ManyToOne
     private Screen screen;
+    @Enumerated(EnumType.ORDINAL)
+    @ElementCollection
     private List<Feature> features;
 }
+
+
+/*
+
+@Enumerated(EnumType.ORDINAL)
+@ElementCollection
+private List<Feature> features;
+
+@Enumerated(EnumType.ORDINAL)-> Tells JPA that this is an ENUM column and store numeric ids inplace of original ENUM value
+@ElementCollection- Tells JPA that it is collection of ENUMs
+
+ */
