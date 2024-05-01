@@ -1,6 +1,6 @@
 package models;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,9 +12,25 @@ import java.util.List;
 @Setter
 @Entity
 public class Show extends BaseModel{
+    @ManyToOne
     private Movie movie;
     private Date startTime;
     private Date endTime;
+    @ManyToOne
     private Screen screen;
+    @Enumerated(EnumType.ORDINAL)
+    @ElementCollection
     private List<Feature> features;
 }
+
+
+/*
+
+@Enumerated(EnumType.ORDINAL)
+@ElementCollection
+private List<Feature> features;
+
+@Enumerated(EnumType.ORDINAL)-> Tells JPA that this is an ENUM column and store numeric ids inplace of original ENUM value
+@ElementCollection- Tells JPA that it is collection of ENUMs
+
+ */
