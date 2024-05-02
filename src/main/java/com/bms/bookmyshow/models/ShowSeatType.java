@@ -1,8 +1,7 @@
-package models;
+package com.bms.bookmyshow.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
-import jdk.jfr.Enabled;
 import lombok.Getter;
 import lombok.Setter;
 

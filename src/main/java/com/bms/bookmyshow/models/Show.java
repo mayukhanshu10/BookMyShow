@@ -1,4 +1,4 @@
-package models;
+package com.bms.bookmyshow.models;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -10,7 +10,7 @@ import java.util.List;
 
 @Getter
 @Setter
-@Entity
+@Entity(name = "shows") // Show is a reserved keyword in MySQL.
 public class Show extends BaseModel{
     @ManyToOne
     private Movie movie;
