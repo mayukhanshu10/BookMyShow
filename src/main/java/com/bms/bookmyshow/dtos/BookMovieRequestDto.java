@@ -1,4 +1,4 @@
-package dtos;
+package com.bms.bookmyshow.dtos;
 
 import lombok.Getter;
 import lombok.Setter;

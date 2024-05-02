@@ -1,13 +1,10 @@
-package controllers;
+package com.bms.bookmyshow.controllers;
 
-import dtos.BookMovieRequestDto;
-import dtos.BookMovieResponseDto;
-import models.Booking;
-import models.BookingResponseStatus;
-import models.BookingStatus;
-import services.BookingService;
-
-import java.util.List;
+import com.bms.bookmyshow.dtos.BookMovieRequestDto;
+import com.bms.bookmyshow.dtos.BookMovieResponseDto;
+import com.bms.bookmyshow.models.Booking;
+import com.bms.bookmyshow.models.BookingResponseStatus;
+import com.bms.bookmyshow.services.BookingService;
 
 public class BookingController {
 

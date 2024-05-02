@@ -1,4 +1,4 @@
-package models;
+package com.bms.bookmyshow.models;
 
 public enum BookingResponseStatus {
     IN_PROGRESS,

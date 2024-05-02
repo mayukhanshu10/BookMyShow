@@ -1,8 +1,8 @@
-package dtos;
+package com.bms.bookmyshow.dtos;
 
 import lombok.Getter;
 import lombok.Setter;
-import models.BookingResponseStatus;
+import com.bms.bookmyshow.models.BookingResponseStatus;
 
 @Getter
 @Setter

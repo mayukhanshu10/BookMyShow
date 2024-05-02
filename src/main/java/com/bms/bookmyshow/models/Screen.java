@@ -1,4 +1,4 @@
-package models;
+package com.bms.bookmyshow.models;
 
 import jakarta.persistence.*;
 import lombok.Getter;
