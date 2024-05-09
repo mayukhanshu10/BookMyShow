@@ -17,6 +17,16 @@ public class BookingController {
     public BookMovieResponseDto bookMovie(BookMovieRequestDto bookMovieRequestDto){
         BookMovieResponseDto bookMovieResponseDto = new BookMovieResponseDto();
 
+        try{
+            Booking booking = bookingService.bookMovie(bookMovieRequestDto.getUserId(),bookMovieRequestDto.getShowId(),
+                    bookMovieRequestDto.getShowSeatIds());
+
+            bookMovieResponseDto.setBookingId(booking.getId());
+            bookMovieResponseDto.setBookingResponseStatus(BookingResponseStatus.CONFIRMED);
+            bookMovieResponseDto.setAmount(booking.getAmount());
+        }catch (RuntimeException e){
+            bookMovieResponseDto.setBookingResponseStatus(BookingResponseStatus.FAILURE);
+        }
 
 
         return null;
