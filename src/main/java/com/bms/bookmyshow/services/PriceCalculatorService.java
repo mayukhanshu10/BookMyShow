@@ -43,6 +43,6 @@ public class PriceCalculatorService {
                 }
             }
         }
-
+        return amount;
     }
 }
