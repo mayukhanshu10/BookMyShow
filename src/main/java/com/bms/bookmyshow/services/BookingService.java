@@ -22,12 +22,14 @@ public class BookingService {
     private UserRepository userRepository;
     private ShowRepository showRepository;
     private ShowSeatRepository showSeatRepository;
+    private PriceCalculatorService priceCalculatorService;
 
     //Using dependency Injection
-    public BookingService(UserRepository userRepository, ShowSeatRepository showSeatRepository, ShowRepository showRepository) {
+    public BookingService(UserRepository userRepository, ShowSeatRepository showSeatRepository, ShowRepository showRepository, PriceCalculatorService priceCalculatorService) {
         this.userRepository = userRepository;
         this.showSeatRepository = showSeatRepository;
         this.showRepository = showRepository;
+        this.priceCalculatorService = priceCalculatorService;
     }
 
     /*
@@ -114,9 +116,10 @@ public class BookingService {
         booking.setPayments(new ArrayList<>());
         booking.setBookedDate(new Date());
         booking.setShowSeats(showSeats);
-//        booking.setAmount();
 
+        //We should Create another Class to calculate price calculator
+        booking.setAmount(priceCalculatorService.calculatePrice(showSeats,bookedShow));
 
-        return null;
+        return booking;
     }
 }
