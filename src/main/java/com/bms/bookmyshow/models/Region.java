@@ -19,6 +19,8 @@ public class Region extends BaseModel{
 
     private String name;
 
-//    List<Theater> theaters; (Can be put into Theater class)
+/*    List<Theater> theaters; (Can be put into Theater class,
+      that is Theater class can store City Name to which it belongs)
+ */
 
 }
