@@ -14,10 +14,10 @@ import java.util.List;
 public class Show extends BaseModel{
     @ManyToOne
     private Movie movie;
-    private Date startTime;
-    private Date endTime;
     @ManyToOne
     private Screen screen;
+    private Date startTime;
+    private Date endTime;
     @Enumerated(EnumType.ORDINAL)
     @ElementCollection
     private List<Feature> features;
